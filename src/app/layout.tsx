@@ -6,6 +6,8 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import 'sweetalert2/dist/sweetalert2.min.css';
 
+import { Analytics } from '@vercel/analytics/next';
+
 import { getConfig } from '@/lib/config';
 import { getDefaultPlaybackSaveInterval } from '@/lib/playback-settings';
 
@@ -165,6 +167,7 @@ export default async function RootLayout({
             </SiteProvider>
           </NavigationLoadingProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
